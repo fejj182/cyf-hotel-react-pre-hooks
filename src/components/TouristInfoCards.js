@@ -2,19 +2,38 @@ import React from "react";
 
 const TouristInfoCards = () => {
   const touristWebsites = [
-    "https://peoplemakeglasgow.com",
-    "https://visitmanchester.com",
-    "https://visitlondon.com"
+    {
+      name: "Glasgow",
+      url: "https://peoplemakeglasgow.com",
+      imageSrc:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Glasgow-George-Square.jpg/250px-Glasgow-George-Square.jpg"
+    },
+    {
+      name: "Manchester",
+      url: "https://visitmanchester.com",
+      imageSrc:
+        "https://whizzardhelicopters.co.uk/sitev1/wp-content/uploads/2015/12/Media-City.jpg"
+    },
+    {
+      name: "London",
+      url: "https://visitlondon.com",
+      imageSrc:
+        "https://www.visitbritainshop.com/espana/~/media/images/subcategory/london-passes.ashx"
+    }
   ];
   return (
     <div>
-      {touristWebsites.map(url => {
+      {touristWebsites.map(city => {
         return (
           <div className="card">
-            <img src="#" className="card-img-top" />
+            <img
+              src={city.imageSrc}
+              className="card-img-top"
+              alt={"image of " + city.name}
+            />
             <div className="card-body">
-              <a href={url} target="_" className="btn btn-primary">
-                Go somewhere
+              <a href={city.url} target="_" className="btn btn-primary">
+                Go to {city.name}
               </a>
             </div>
           </div>
