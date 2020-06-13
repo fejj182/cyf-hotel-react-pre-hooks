@@ -23,9 +23,9 @@ const TouristInfoCards = () => {
   ];
   return (
     <div id="tourist-info-cards">
-      {touristWebsites.map(city => {
+      {touristWebsites.map((city, index) => {
         return (
-          <div className="card">
+          <div className="card" key={index}>
             <img
               src={city.imageSrc}
               className="card-img-top"

@@ -5,8 +5,8 @@ const Footer = props => {
   return (
     <div>
       <ul>
-        {contactInfo.map(line => {
-          return <li>{line}</li>;
+        {contactInfo.map((line, index) => {
+          return <li key={index}>{line}</li>;
         })}
       </ul>
     </div>

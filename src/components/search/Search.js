@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./components/SearchButton";
+import SearchButton from "./SearchButton";
 
 const Search = () => {
   return (
@@ -18,7 +18,7 @@ const Search = () => {
                 className="form-control"
                 placeholder="Customer name"
               />
-              <Button />
+              <SearchButton />
             </div>
           </form>
         </div>
