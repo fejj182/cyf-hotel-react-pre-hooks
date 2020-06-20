@@ -32,6 +32,10 @@
   width: 75%;
 }
 
+.selected {
+  background-color: blueviolet;
+}
+
 .App-title {
   font-size: 1.5em;
 }

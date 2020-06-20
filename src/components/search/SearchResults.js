@@ -1,5 +1,5 @@
 import React from "react";
-import CustomerRow from "./Customer";
+import Customer from "./Customer";
 
 const SearchResults = props => {
   const results = props.results;
@@ -16,7 +16,7 @@ const SearchResults = props => {
         </thead>
         <tbody>
           {results.map((row, index) => {
-            return <CustomerRow key={index} customer={row} />;
+            return <Customer key={index} customer={row} />;
           })}
         </tbody>
       </table>
